@@ -23,7 +23,7 @@ Se presentará el paso a paso para costruir el código desarrollado para que el 
    ```sh
    listaPalabras = ["Perro", "Real Madrid", "Bogotá", "Queen", "Silla", "Rey León", "Argentina", "Ciclismo", "explorar", "Python"]
    ```
-En la realización del juego se definieron dentro de la lista una cantidad de 1355 palabras, las cuales se incluyeron primeramente dentro de un diccionario que contenía listas según la categoría de las palabras, tales como animales, países, acciones, programación, películas, equipos de fútbol, jugadores de fútbol, libros, comida, carreras universitarias, música, objetos, ciudades y marcas, no obstante dentro de la ejecución del código se logró evidenciar que la definición de dichas palabras dentro de listas que a su vez estaban dentro de un diccionario no era muy viable para la realización del programa, así que se decidió eliminar dicho diccionario y las listas de categorías que estaban dentro de él, y colocar simplemente las palabras dentro de una sola lista.
+   En la realización del juego se definieron dentro de la lista una cantidad de 1355 palabras, las cuales se incluyeron primeramente dentro de un diccionario que contenía listas según la categoría de las palabras, tales como animales, países, acciones, programación, películas, equipos de fútbol, jugadores de fútbol, libros, comida, carreras universitarias, música, objetos, ciudades y marcas, no obstante dentro de la ejecución del código se logró evidenciar que la definición de dichas palabras dentro de listas que a su vez estaban dentro de un diccionario no era muy viable para la realización del programa, así que se decidió eliminar dicho diccionario y las listas de categorías que estaban dentro de él, y colocar simplemente las palabras dentro de una sola lista.
 de la siguiente manera:
 
 ![image](https://github.com/Artuu1999/Proyecto-Final/assets/124615034/2262427a-df38-4211-8eab-49eb0c83192b)
@@ -42,13 +42,14 @@ de la siguiente manera:
     print("somos Arturo Moreno y Juan Morales de Team comillas")
    ```
    
-4. 
+4. Ahora bien, ya teniendo la lista de palabras disponibles para el desarrollo del juego y el modulo random importado, se creó una función que usa como argumento la lista, en este caso tiene el nombre de diccionario, en dicha función a la variable palabra se le asigna el dato o valor resultante de la función random.choice y de la aplicación del método .lower().
    
    ```sh
    def Palabra(diccionario):
     palabra = random.choice(diccionario).lower()
     return palabra
    ```
+   La función random.choice selecciona un elemento de forma aleatoria proveniente de una secuencia (lista, tupla, diccionario), teniendo todos los elementos de dichas secuencias la misma probabilidad de ser seleccionados; por otra parte el método .lower() hace que una determinada variable seleccionada se convierta a minúsula. Los elementos descritos anteriormente se usaron para extraer una palabra de esa gran lista de palabras y convertirla a minúscula para facilitar la experiencia del usuario
    
 5. 
    
@@ -149,8 +150,7 @@ de la siguiente manera:
    ```
    
 11. 
-   
-   ```sh
+```sh
    def verificarLetra(letra,palabra,tablero,letrasErroneas:list):
     if letra in palabra:
         print("muy bien")
@@ -158,7 +158,7 @@ de la siguiente manera:
     else:
         print("¡Lo mataste!, sigue intentando :(")
         letrasErroneas.append(letra)
-   ```
+```
    
 12. 
    

@@ -208,7 +208,7 @@ de la siguiente manera:
     return '_' not in tablero
    ````
    
-14.
+14. Se recibe el parámetro del diccionario y se llama a la función encontrar Palabras, asignandose a determianadas variables (tablero, palabras y letrasErrores, luego se genera un ciclo while que se ejecutarás mientras las palabras erroneas sean menores a la cantidad de simbolos, cada iteración se actualiza el estado actual
    
    ```sh
    def jugar(diccionario):
@@ -223,7 +223,7 @@ de la siguiente manera:
             break
    ````
    
-15.
+15. Ya al finalizar el juego para el usuario, se pregunta sí se desea jugar de nuevo o sí por el contrario se desea salir del juego, para ello se solicita el ingreso de un sí o de un no, que están sujetos a un condicional el cual permite llevar a cabo la anterior acción descrita.
    
    ```sh
    def jugarOtraVez():
@@ -237,7 +237,7 @@ de la siguiente manera:
         jugarOtraVez()
    ````
    
-16.
+16. La siguiente función símplemente muestra agradecimiento al jugador por participar en el juego y hace mención al equipo creador
    
    ```sh
    def despedida():
@@ -247,9 +247,15 @@ de la siguiente manera:
 17.
    
    ```sh
-   def bienvenida():
-    print("Bienvenid@ a nuestro ahorcado")
-    print("somos Arturo Moreno y Juan Morales de Team comillas")
+   bienvenida()
+    while True:
+        jugar(diccionario)
+        a = jugarOtraVez()
+        if a == "sí":
+            continue
+        else:
+            break
+    despedida()
    ````
 ## Lógica de como funciona el juego
 ```mermaid

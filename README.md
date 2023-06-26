@@ -226,6 +226,46 @@ de la siguiente manera:
             break
     despedida()
    ```
+
+```mermaid
+flowchart TD
+    A(Inicio)-->B[Bienvenido a este ahorcado]
+    B-->D[Somos el Team Comillas]
+    D-->E{Elije la dificultad del juego}
+    E-->F[Facil]
+    E-->G[Normal]
+    E-->H[Dificil]
+    F-->I["- Muestra letras erroneas
+    - "]
+    G-->J
+    H-->K
+    I-->L[Imprimir la figura en cuestión]
+    J-->L
+    K-->L
+    L-->M[El programa elije una palabra aleatoria]
+    M-->N[Solicitar al usuario el ingreso de una letra]
+    N-->O{Está la letra ingresada en la palabra escogida}
+    O-->P[SI]
+    O-->Q[NO]
+    P-->R[Agregar la letra a la palabra adivinada y dejar la figura igual]
+    Q-->S[Restar un intento a la participación y agregar al dibujo una acción]
+    R-->T{Ha descifrado ya la palabra?}
+    S-->U{Se han acabado los intentos?}
+    T-->V[SI]
+    T-->W[NO]
+    U-->X[SI]
+    U-->Y[NO]
+    W-->N
+    Y-->N
+    V-->Z[Imprimir muy bien, lo has logrado]
+    Z-->2
+    X-->1[Imprimir Lo mataste y la animación completa]
+    1-->2{Desea jugar de nuevo?}
+    2-->3[NO]
+    2-->4[SI]
+    4-->6(Vuelve al Inicio)
+    3-->5(FIN)
+```
    
 ## Conclusiones: 
 

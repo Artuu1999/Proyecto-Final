@@ -208,7 +208,7 @@ de la siguiente manera:
     return '_' not in tablero
    ````
    
-14. Se recibe el parámetro del diccionario y se llama a la función encontrar Palabras, asignandose a determianadas variables (tablero, palabras y letrasErrores, luego se genera un ciclo while que se ejecutarás mientras las palabras erroneas sean menores a la cantidad de simbolos, cada iteración se actualiza el estado actual
+14. Se recibe el parámetro del diccionario y se llama a la función encontrar Palabras, asignandose a determianadas variables (tablero, palabras y letrasErrores, luego se genera un ciclo while que se ejecutarás mientras las palabras erroneas sean menores a la cantidad de simbolos, cada iteración se actualiza el estado actual de la longitud de letras erroneas con el tablero, se solicita de nuevo al ususrio el ingreso de letras y se verifica, todo esto con funciones anteriores, por último se verfifica si se ha adivinado la palabra.
    
    ```sh
    def jugar(diccionario):
@@ -244,7 +244,7 @@ de la siguiente manera:
     print("¡Gracias por jugar, somos Team comillas!")
    ````
    
-17.
+17. En esta parte se ejecuta como tal el juego, mostrando el mensaje de bienvenida al principio, realizando un ciclo while hasta que el jugador decida romperlo al no jugar más, por último se imprime el mensaje de despedida, finalizándo así la ejecución en consola del ahorcado.
    
    ```sh
    bienvenida()

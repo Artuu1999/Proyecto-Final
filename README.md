@@ -293,9 +293,9 @@ flowchart TD
     E-->F[Facil]
     E-->G[Normal]
     E-->H[Dificil]
-    F-->I["- Longitud de palabra menor o igual a 5 letras"]
+    F-->I["- Longitud de palabra mayor a 7"]
     G-->J["- Longitud de palabra  mayor a 5 pero menor o igual a 7"]
-    H-->K["- Longitud de palabra mayor a 7"]
+    H-->K["- Longitud de palabra menor o igual a 5 letras"]
     I-->L[Imprimir la figura en cuestión]
     J-->L
     K-->L

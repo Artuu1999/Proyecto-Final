@@ -323,6 +323,29 @@ flowchart TD
     4-->6(Vuelve al Inicio)
     3-->5(FIN)
 ```
+## ¿Cómo ejecutar el juego?
+1. Verificar que python este instalado
+   ![image](https://github.com/Artuu1999/Proyecto-Final/assets/124615034/7aacff59-e07d-4ec5-9b02-9ab565431125)
+   
+2. Seleccionar el cuadro verde de code dentro del presente repositorio y descargar el archivo .ZIP
+   ![image](https://github.com/Artuu1999/Proyecto-Final/assets/124615034/d61d2813-91f6-4f04-9a37-e447e8f59f11)
+   ![image](https://github.com/Artuu1999/Proyecto-Final/assets/124615034/6595ee9a-72c4-49ad-a76b-3b94356169a9)
+
+3. Se extrae el archivo para mayor facilidad de uso
+   ![image](https://github.com/Artuu1999/Proyecto-Final/assets/124615034/36ff8595-5222-4b27-a330-780e5e83bef6)
+
+4. Seleccionamos la carpeta en el lugar donde se extrajo.
+   ![image](https://github.com/Artuu1999/Proyecto-Final/assets/124615034/773e944e-9045-4f01-b5ea-b8b93905563a)
+
+5. Seleccionamos el archivo de python "ahorcado"
+   ![image](https://github.com/Artuu1999/Proyecto-Final/assets/124615034/f0f135ee-e7cc-4db1-8f83-52bd7540eda9)
+
+6. Ya podemos iniciar a jugar.
+   ![image](https://github.com/Artuu1999/Proyecto-Final/assets/124615034/b8143b72-57bf-4b1b-88e2-ba6e54852d30)
+   ![image](https://github.com/Artuu1999/Proyecto-Final/assets/124615034/1d4e3e48-e102-45f8-8675-ef52cfda7bc0)
+   ![image](https://github.com/Artuu1999/Proyecto-Final/assets/124615034/2e20412d-d55f-4bd7-9cd9-3c9fbe8ef92a)
+
+
    
 ## Conclusiones: 
 

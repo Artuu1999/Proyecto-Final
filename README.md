@@ -25,16 +25,17 @@ Se presentará el paso a paso para costruir el código desarrollado para que el 
    ```
    En la realización del juego se definieron dentro de la lista una cantidad de 1355 palabras, las cuales se incluyeron primeramente dentro de un diccionario que contenía listas según la categoría de las palabras, tales como animales, países, acciones, programación, películas, equipos de fútbol, jugadores de fútbol, libros, comida, carreras universitarias, música, objetos, ciudades y marcas, no obstante dentro de la ejecución del código se logró evidenciar que la definición de dichas palabras dentro de listas que a su vez estaban dentro de un diccionario no era muy viable para la realización del programa, así que se decidió eliminar dicho diccionario y las listas de categorías que estaban dentro de él, y colocar simplemente las palabras dentro de una sola lista.
 de la siguiente manera:
-
 ![image](https://github.com/Artuu1999/Proyecto-Final/assets/124615034/2262427a-df38-4211-8eab-49eb0c83192b)
 
-2. Importar el módulo random, el cual permitirá posteriormente elegir de la lista una palabra aleatoria, la cual al ejecutar el codigo será la que el usuario intente desifrar.
+
+3. Importar el módulo random, el cual permitirá posteriormente elegir de la lista una palabra aleatoria, la cual al ejecutar el codigo será la que el usuario intente desifrar.
    
    ```sh
    import random
    ```
+
    
-3. Se define una función denominada bienvenida, que como su nombre lo indica imprimirá el mensaje inicial en el juego, imprimiendo al correr el código el nombre del juego, los nombres de los participantes del proyecto y el nombre del equipo que realizó dicho trabajo, la función no recibe argumentos, ya que simplemente imprime el mensaje definido en ella.
+4. Se define una función denominada bienvenida, que como su nombre lo indica imprimirá el mensaje inicial en el juego, imprimiendo al correr el código el nombre del juego, los nombres de los participantes del proyecto y el nombre del equipo que realizó dicho trabajo, la función no recibe argumentos, ya que simplemente imprime el mensaje definido en ella.
    
    ```sh
    def bienvenida():
@@ -42,16 +43,31 @@ de la siguiente manera:
     print("somos Arturo Moreno y Juan Morales de Team comillas")
    ```
    
-4. Ahora bien, ya teniendo la lista de palabras disponibles para el desarrollo del juego y el modulo random importado, se creó una función que usa como argumento la lista, en este caso tiene el nombre de diccionario, en dicha función a la variable palabra se le asigna el dato o valor resultante de la función random.choice y de la aplicación del método .lower().
+   
+5. Ahora bien, ya teniendo la lista de palabras disponibles para el desarrollo del juego y el modulo random importado, se creó una función que usa como argumento la lista, en este caso tiene el nombre de diccionario, en dicha función a la variable palabra se le asigna el dato o valor resultante de la función random.choice y de la aplicación del método .lower(), y se retorna el valor de dicja variable.
    
    ```sh
    def Palabra(diccionario):
     palabra = random.choice(diccionario).lower()
     return palabra
    ```
-   La función random.choice selecciona un elemento de forma aleatoria proveniente de una secuencia (lista, tupla, diccionario), teniendo todos los elementos de dichas secuencias la misma probabilidad de ser seleccionados; por otra parte el método .lower() hace que una determinada variable seleccionada se convierta a minúsula. Los elementos descritos anteriormente se usaron para extraer una palabra de esa gran lista de palabras y convertirla a minúscula para facilitar la experiencia del usuario
+   La función random.choice selecciona un elemento de forma aleatoria proveniente de una secuencia (lista, tupla, diccionario), teniendo todos los elementos de dichas secuencias la misma probabilidad de ser seleccionados; por otra parte el método .lower() hace que una determinada variable seleccionada se convierta a minúsula. Los elementos descritos anteriormente se usaron para extraer una palabra de esa gran lista de palabras y convertirla a minúscula para facilitar la experiencia del usuario.
+   Un ejemplo de como funciona random.choice y .lower().
+      ```sh
+   import random
+   listaPalabras = ["Perro", "Real Madrid", "Bogotá", "Queen", "Silla", "Rey León", "Argentina", "Ciclismo", "explorar", "Python"]
+   palabra = random.choice(listaPalabras).lower()
+   print(palabra)
+   ```
    
-5. 
+   ![image](https://github.com/Artuu1999/Proyecto-Final/assets/124615034/55db7ba0-5655-45f0-8bc8-21d8e37a5a46)
+
+   
+6. Posteriormente se trabaja en la elección por parte del usuario de la dificultad del juego, definiendo una función con el argumento de la lista, la cual en nuestro caso, irónicamente tiene el nombre de diccionario.
+   Primero, se solicita el ingreso del nivel en el que se quiere jugar (fácil, normal o difícil), se utiliza el método .lower() en caso que el usuario digite en mayúsculas, luego se llama a la función de la elección aleatoria de la palabra definida en el paso anterior.
+   Segundo, se inicializa un bucle while con b en 1 que hará que el proceso que definiremos a continuación se defina hasta cierto punto o mejor dicho, hasta cierta condición específica.
+   Tercero, dentro del bucle realizar tres condicionales para cada nivel de dificultad, para el fácil establecerse si la longitud de la palabra es menor o igual a 5, para el  normal si es mayor a 5 y menor o igual a 7 y por último difícil si la longitud de la palabra es menor a 7 letras.
+   Finalmente cuando queda asignada la palabra escogida a un nivel de dificultad se retorna la función y se finaliza el bucle while.
    
    ```sh
    def dificultades(diccionario):
@@ -79,7 +95,7 @@ de la siguiente manera:
                 palabra = Palabra(diccionario)
    ```
    
-6. 
+8. 
    
    ```sh
    def encontrarPalabra(diccionario:dict):
@@ -88,7 +104,7 @@ de la siguiente manera:
     return tablero, palabra,[]
    ```
    
-7. ss
+9. ss
    
    ```sh
    escenario = \
@@ -109,7 +125,7 @@ de la siguiente manera:
     simbolos = '--|-||/\/\)'
    ```
    
-8. 
+10. 
    
    ```sh
    def escenarios(errores:int):
@@ -120,7 +136,7 @@ de la siguiente manera:
       print(escena)
    ```
 
-9. 
+11. 
    
    ```sh
    def tableros(tablero, letrasErroneas):
@@ -133,7 +149,7 @@ de la siguiente manera:
         print()
    ```
    
-10. 
+11. 
    
    ```sh
    def letras(letrasErroneas):
@@ -235,10 +251,9 @@ flowchart TD
     E-->F[Facil]
     E-->G[Normal]
     E-->H[Dificil]
-    F-->I["- Muestra letras erroneas
-    - "]
-    G-->J
-    H-->K
+    F-->I["- Longitud de palabra menor o igual a 5 letras"]
+    G-->J["- Longitud de palabra  mayor a 5 pero menor o igual a 7"]
+    H-->K["- Longitud de palabra mayor a 7"]
     I-->L[Imprimir la figura en cuestión]
     J-->L
     K-->L

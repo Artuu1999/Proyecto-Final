@@ -19,7 +19,7 @@ A continuación se hará un breve repaso por los conceptos y los recursos usados
 ## Procedimiento:
 Se presentará el paso a paso para costruir el código desarrollado para que el juego funcione.
 
-1) Se crea una lista con las palabras de las cuales se harán uso en el ahorcado, es decir las que se adivinarán, es menester recordar que una lista se delimita con brackets (**[ ]**), se separan los elementos dentros de ella, en este caso las palabras mediante una coma (**,**), y si los elementos son strings (como efectivamente lo son en el código) se definen cada string entre unas comillas (**" "**). De la siguiente manera:
+1. Se crea una lista con las palabras de las cuales se harán uso en el ahorcado, es decir las que se adivinarán, es menester recordar que una lista se delimita con brackets (**[ ]**), se separan los elementos dentros de ella, en este caso las palabras mediante una coma (**,**), y si los elementos son strings (como efectivamente lo son en el código) se definen cada string entre unas comillas (**" "**). De la siguiente manera:
    ```sh
    listaPalabras = ["Perro", "Real Madrid", "Bogotá", "Queen", "Silla", "Rey León", "Argentina", "Ciclismo", "explorar", "Python"]
    ```
@@ -28,17 +28,203 @@ de la siguiente manera:
 
 ![image](https://github.com/Artuu1999/Proyecto-Final/assets/124615034/2262427a-df38-4211-8eab-49eb0c83192b)
 
-2) Importar el módulo random, el cual permitirá posteriormente elegir de la lista una palabra aleatoria, la cual al ejecutar el codigo será la que el usuario intente desifrar.
+2. Importar el módulo random, el cual permitirá posteriormente elegir de la lista una palabra aleatoria, la cual al ejecutar el codigo será la que el usuario intente desifrar.
    
    ```sh
    import random
    ```
-3) Se define una función denominada bienvenida, que como su nombre lo indica imprimirá el mensaje inicial en el juego, imprimiendo al correr el código el nombre del juego, los nombres de los participantes del proyecto y el nombre del equipo que realizó dicho trabajo, la función no recibe argumentos, ya que simplemente imprime el mensaje definido en ella.
+   
+3. Se define una función denominada bienvenida, que como su nombre lo indica imprimirá el mensaje inicial en el juego, imprimiendo al correr el código el nombre del juego, los nombres de los participantes del proyecto y el nombre del equipo que realizó dicho trabajo, la función no recibe argumentos, ya que simplemente imprime el mensaje definido en ella.
    
    ```sh
    def bienvenida():
     print("Bienvenid@ a nuestro ahorcado")
     print("somos Arturo Moreno y Juan Morales de Team comillas")
+   ```
+   
+4. 
+   
+   ```sh
+   def Palabra(diccionario):
+    palabra = random.choice(diccionario).lower()
+    return palabra
+   ```
+   
+5. 
+   
+   ```sh
+   def dificultades(diccionario):
+    a =input("Ingrese la dificultad en la que desea jugar (facil, normal, dificil): ").lower()
+    palabra = Palabra(diccionario)
+    b = 1
+    while b == 1:
+        if a == "facil":
+            if len(palabra) <= 5:
+                b = 2
+                return palabra
+            else:
+                palabra = Palabra(diccionario)
+        elif a == "normal":
+            if 5 < len(palabra) <= 7:
+                b = 2
+                return palabra
+            else:
+                palabra = Palabra(diccionario)
+        elif a == "dificil":
+            if len(palabra) > 7:
+                b = 2
+                return palabra
+            else:
+                palabra = Palabra(diccionario)
+   ```
+   
+6. 
+   
+   ```sh
+   def encontrarPalabra(diccionario:dict):
+    palabra = dificultades(diccionario)
+    tablero = ['_']*len(palabra)
+    return tablero, palabra,[]
+   ```
+   
+7. ss
+   
+   ```sh
+   escenario = \
+   '''
+      ------- 
+      |      |
+    1        |
+   4 2       |
+    3        |
+   657       |
+   8 9       |
+             |
+          -------
+          |     |
+          -------
+          '''
+
+    simbolos = '--|-||/\/\)'
+   ```
+   
+8. 
+   
+   ```sh
+   def escenarios(errores:int):
+    escena = escenario
+    for i in range (0, len(simbolos)):
+      simbolo = simbolos[i] if i  < errores else ''
+      escena = escena.replace(str(i), simbolo)
+      print(escena)
+   ```
+
+9. 
+   
+   ```sh
+   def tableros(tablero, letrasErroneas):
+    for i in tablero:
+        print(i, end=' ')
+    print()
+    print()
+    if len(letrasErroneas) > 0:
+        print('letras erroneas', *letrasErroneas)
+        print()
+   ```
+   
+10. 
+   
+   ```sh
+   def letras(letrasErroneas):
+    while True:
+        letra = input("Ingrese una letra: ").lower()
+        if letra in letrasErroneas:
+            print("Ya intento esa letra, pruebe con otra")
+        elif len(letra) != 1:
+            print("Introducir solo una letra")
+        elif letra not in 'abcdefghijklmnopqrstuvwxyz':
+            print("Debe ingresar una letra")
+        else:
+            return letra
+   ```
+   
+11. 
+   
+   ```sh
+   def verificarLetra(letra,palabra,tablero,letrasErroneas:list):
+    if letra in palabra:
+        print("muy bien")
+        actualizarTablero(letra, palabra, tablero)
+    else:
+        print("¡Lo mataste!, sigue intentando :(")
+        letrasErroneas.append(letra)
+   ```
+   
+12. 
+   
+   ```sh
+   def actualizarTablero(letra, palabra, tablero):
+    for indice, letra1 in enumerate(palabra):
+        if letra == letra1:
+            tablero[indice] = letra
+   ````
+   
+13. 
+   
+   ```sh
+   def comrpoPalabra(tablero):
+    return '_' not in tablero
+   ```
+   
+14. 
+   
+   ```sh
+   def jugar(diccionario):
+    tablero, palabra, letrasErroneas = encontrarPalabra(diccionario)
+    while len(letrasErroneas) < len(simbolos):
+        escenarios(len(letrasErroneas))
+        tableros(tablero,letrasErroneas)
+        letra = letras(letrasErroneas)
+        verificarLetra(letra,palabra,tablero,letrasErroneas)
+        if comrpoPalabra(tablero):
+            print("Lo has logrado")
+            break
+   ```
+   
+15. 
+   
+   ```sh
+   def jugarOtraVez():
+    a = input("Desea jugar otra vez, ingrese sí o no: ").lower()
+    if a == "sí":
+        return a
+    elif a == "no":
+        return a
+    else:
+        print('Ingrese "sí", si desea seguir jugando. Ingrese "no" si no desea seguir jugando')
+        jugarOtraVez()
+   ````
+   
+16. 
+   
+   ```sh
+   def despedida():
+    print("¡Gracias por jugar, somos Team comillas!")
+   ````
+   
+17. 
+   
+   ```sh
+   if __name__ == "__main__":
+   bienvenida()
+    while True:
+        jugar(diccionario)
+        a = jugarOtraVez()
+        if a == "sí":
+            continue
+        else:
+            break
+    despedida()
    ```
    
 ## Conclusiones: 

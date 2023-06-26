@@ -15,6 +15,33 @@ Bienvenidos a nuestro repositorio del proyecto final de nuestra clase de program
 ## Introdución:
 A continuación se hará un breve repaso por los conceptos y los recursos usados dentro del argot de la bella ciencia de la progrmación que se tuvieron en cuenta para la relización del código del juego diseñado.
 
+### Visual Studio Code
+Es el editor del código fuente y el interprete de Python que se ha usado durante el semestre y en desarrollo del proyecto
+### Python 3.11
+Es la versión usada de Python, un lenguaje de programación de alto nivel de reconocimiento de nivel mundial,
+### GitHub
+Una plataforma web diseñada para almacenar y guardar proyecto de generaalmente desarrollo de software, es uno de los sistemas de repositorios más reconocidos a nivel internacional.
+### Diagramas de flujo
+Es la representación gráfica gráfica de un algoritmo, funciona para evidenciar como debería funcionar el código y para detallar el paso a paso, en este caso se realizó para entender la lógica del juego.
+### Variables y tipos de datos
+Se usaron variables durante el proyecto para almacenar ciertos datos e información, almacenando strings, listas, números, entre otros.
+### Bucles
+Dentro de python son estructuras de control que permite la ejecución de un bloque de código hasta que se cumpla cierta condición, los más usando son el for que itera elemento por elemento y el while que se ejecuta mientras se esté cumpliendo algo
+### Condicionales
+Esta estructura permite tomar decisiones basadas en determinada condición si se cumple o no, usando se if, else o elif.
+### Funciones
+Se definen y se pueden llamar en el momento que sea necesario, retornando alguna variable  dato procesado dentro de la función, realizando como tal una tarea específica, se definen mediante la palabra reservada **"def"**
+### Listas
+Es una secuencia que puede almacenar varios tipos de datos, separando los elementos mediante una coma y delimitandose con brackets (**[ ]**)
+### Tuplas
+Es una secuencia que puede almacenar varios tipos de datos, separando los elementos mediante una coma (**,**) y delimitandose con paréntesis (**( )**), se diferencian de las listas, ya que las tuplas son inmutables.
+### Diccionarios
+Es una colección de parejas (clave-valor) donde los valores se obtienen a partir de su valor, los elementos se separan por comas (**,**) y se delimitan por llaves (**{ }**).
+### Strings
+Una cadena de caracteres es una secuencia de caracteres que se utilza para representar texto, se pueden definir mediante el uso de comillas.
+### Paquetes y módulos
+Los módulos son archivos que contienen funciones de gran utilidad dentro del código, se debe importar mediante **"import"**; por otra parte los paquetes son carpetas que contienen a su vez gran cantidad de módulos.
+
 
 ## Procedimiento:
 Se presentará el paso a paso para costruir el código desarrollado para que el juego funcione.

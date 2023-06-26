@@ -5,32 +5,32 @@
 - Juan Camilo Morales Hernandez
 - Arturo Moreno Covaría
 
-Bienvenidos a nuestro repositorio del proyecto final de nuestra clase de programación de computadores de la Universidad Nacional de Colombia del semestre 2023-I, el cual consistía en crear un juego de ahorcado utilizando Pyhton.
+Bienvenidos a nuestro repositorio del proyecto final de nuestra clase de programación de computadores de la Universidad Nacional de Colombia del semestre 2023-I, el cual consistía en crear un juego de ahorcado utilizando Python.
 
 ## Objetivos del Proyecto
-- Colocar en práctica los conceptos aprendidos durante el semestre 2023-I en la clase de programación de computadores, haciendo uso de los recursos a disposición para la elaboración del proyecto
-- Desarrollar aptitudes relacionadas a la resolución de problemas dentro del ámbito de la programación
-- Manejar de la manera más óptima posible ciertos tipos de habilidades blandas, tales como el trabajo en equipo, la planificación de proyectos, el manejo del tiempo y el trabajo del estrés y la presión.
+- Colocar en práctica los conceptos aprendidos durante el semestre 2023-I en la clase de programación de computadores, haciendo uso de los recursos a disposición para la elaboración del proyecto.
+- Desarrollar aptitudes relacionadas a la resolución de problemas dentro del ámbito de la programación.
+- Manejar de la manera más óptima posible ciertos tipos de habilidades blandas, tales como el trabajo en equipo, la planificación de proyectos, el manejo del tiempo y el trabajo bajo estrés y presión.
 
 ## Introdución:
-A continuación se hará un breve repaso por los conceptos y los recursos usados dentro del argot de la bella ciencia de la progrmación que se tuvieron en cuenta para la relización del código del juego diseñado.
+A continuación se hará un breve repaso de los conceptos y los recursos usados dentro del argot de la bella ciencia de la programación que se tuvieron en cuenta para la realización del código del juego diseñado.
 
 ### Visual Studio Code
-Es el editor del código fuente y el interprete de Python que se ha usado durante el semestre y en desarrollo del proyecto
+Es el editor del código fuente y el intérprete de Python que se ha usado durante el semestre y en el desarrollo del proyecto.
 ### Python 3.11
-Es la versión usada de Python, un lenguaje de programación de alto nivel de reconocimiento de nivel mundial,
+Es la versión usada de Python, un lenguaje de programación de alto nivel de reconocimiento mundial.
 ### GitHub
-Una plataforma web diseñada para almacenar y guardar proyecto de generaalmente desarrollo de software, es uno de los sistemas de repositorios más reconocidos a nivel internacional.
+Es una plataforma web diseñada para almacenar y guardar proyectos de desarrollo de software. Es uno de los sistemas de repositorios más reconocidos a nivel internacional.
 ### Diagramas de flujo
-Es la representación gráfica gráfica de un algoritmo, funciona para evidenciar como debería funcionar el código y para detallar el paso a paso, en este caso se realizó para entender la lógica del juego.
+Es la representación gráfica de un algoritmo. Funciona para evidenciar cómo debería funcionar el código y para detallar el paso a paso. En este caso, se realizó para entender la lógica del juego.
 ### Variables y tipos de datos
-Se usaron variables durante el proyecto para almacenar ciertos datos e información, almacenando strings, listas, números, entre otros.
+Se usaron variables durante el proyecto para almacenar ciertos datos e información, como strings, listas, números, entre otros.
 ### Bucles
-Dentro de python son estructuras de control que permite la ejecución de un bloque de código hasta que se cumpla cierta condición, los más usando son el for que itera elemento por elemento y el while que se ejecuta mientras se esté cumpliendo algo
+Dentro de Python, son estructuras de control que permiten la ejecución de un bloque de código hasta que se cumpla cierta condición. Los más usados son el for, que itera elemento por elemento, y el while, que se ejecuta mientras se cumpla algo.
 ### Condicionales
 Esta estructura permite tomar decisiones basadas en determinada condición si se cumple o no, usando se if, else o elif.
 ### Funciones
-Se definen y se pueden llamar en el momento que sea necesario, retornando alguna variable  dato procesado dentro de la función, realizando como tal una tarea específica, se definen mediante la palabra reservada **"def"**
+Se definen y se pueden llamar en el momento que sean necesarias, retornando alguna variable o dato procesado dentro de la función. Realizan una tarea específica y se definen mediante la palabra reservada "def".
 ### Listas
 Es una secuencia que puede almacenar varios tipos de datos, separando los elementos mediante una coma y delimitandose con brackets (**[ ]**)
 ### Tuplas
@@ -348,8 +348,13 @@ flowchart TD
 
    
 ## Conclusiones: 
+- La programación no solo consiste en conocer una serie de conceptos relacionados a ella, sino mayormente en aplicar dichos conocimientos en la resolución de problemas dados.
+- El manejo acorde y responsable del tiempo es fundamental para el buen proceder de un proyecto
 
 ## Referencias:
 - Stack overflow. (2008). Retrieved from https://stackoverflow.com/
 - Van Rossum, G., & Drake, F. L. (2009). Python 3 Reference Manual. Scotts Valley, CA: CreateSpace.
 - Challenger-Pérez, I., Díaz-Ricardo, Y., & Becerra-García, R. A. (2014). El lenguaje de programación Python. Ciencias Holguín, 20(2), 1-13.
+
+#FIN
+Muchas Gracias por visitar nuestro repo, si tienes alguna sugerencia o correción no dudes en contactarnos y hacernola saber.

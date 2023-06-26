@@ -28,14 +28,14 @@ de la siguiente manera:
 ![image](https://github.com/Artuu1999/Proyecto-Final/assets/124615034/2262427a-df38-4211-8eab-49eb0c83192b)
 
 
-3. Importar el módulo random, el cual permitirá posteriormente elegir de la lista una palabra aleatoria, la cual al ejecutar el codigo será la que el usuario intente desifrar.
+2. Importar el módulo random, el cual permitirá posteriormente elegir de la lista una palabra aleatoria, la cual al ejecutar el codigo será la que el usuario intente desifrar.
    
    ```sh
    import random
    ```
 
    
-4. Se define una función denominada bienvenida, que como su nombre lo indica imprimirá el mensaje inicial en el juego, imprimiendo al correr el código el nombre del juego, los nombres de los participantes del proyecto y el nombre del equipo que realizó dicho trabajo, la función no recibe argumentos, ya que simplemente imprime el mensaje definido en ella.
+3. Se define una función denominada bienvenida, que como su nombre lo indica imprimirá el mensaje inicial en el juego, imprimiendo al correr el código el nombre del juego, los nombres de los participantes del proyecto y el nombre del equipo que realizó dicho trabajo, la función no recibe argumentos, ya que simplemente imprime el mensaje definido en ella.
    
    ```sh
    def bienvenida():
@@ -44,7 +44,7 @@ de la siguiente manera:
    ```
    
    
-5. Ahora bien, ya teniendo la lista de palabras disponibles para el desarrollo del juego y el modulo random importado, se creó una función que usa como argumento la lista, en este caso tiene el nombre de diccionario, en dicha función a la variable palabra se le asigna el dato o valor resultante de la función random.choice y de la aplicación del método .lower(), y se retorna el valor de dicja variable.
+4. Ahora bien, ya teniendo la lista de palabras disponibles para el desarrollo del juego y el modulo random importado, se creó una función que usa como argumento la lista, en este caso tiene el nombre de diccionario, en dicha función a la variable palabra se le asigna el dato o valor resultante de la función random.choice y de la aplicación del método .lower(), y se retorna el valor de dicja variable.
    
    ```sh
    def Palabra(diccionario):
@@ -63,10 +63,10 @@ de la siguiente manera:
    ![image](https://github.com/Artuu1999/Proyecto-Final/assets/124615034/55db7ba0-5655-45f0-8bc8-21d8e37a5a46)
 
    
-6. Posteriormente se trabaja en la elección por parte del usuario de la dificultad del juego, definiendo una función con el argumento de la lista, la cual en nuestro caso, irónicamente tiene el nombre de diccionario.
-   Primero, se solicita el ingreso del nivel en el que se quiere jugar (fácil, normal o difícil), se utiliza el método .lower() en caso que el usuario digite en mayúsculas, luego se llama a la función de la elección aleatoria de la palabra definida en el paso anterior.
-   Segundo, se inicializa un bucle while con b en 1 que hará que el proceso que definiremos a continuación se defina hasta cierto punto o mejor dicho, hasta cierta condición específica.
-   Tercero, dentro del bucle realizar tres condicionales para cada nivel de dificultad, para el fácil establecerse si la longitud de la palabra es menor o igual a 5, para el  normal si es mayor a 5 y menor o igual a 7 y por último difícil si la longitud de la palabra es menor a 7 letras.
+5. Posteriormente se trabaja en la elección por parte del usuario de la dificultad del juego, definiendo una función con el argumento de la lista, la cual en nuestro caso, irónicamente tiene el nombre de diccionario.
+   - Primero, se solicita el ingreso del nivel en el que se quiere jugar (fácil, normal o difícil), se utiliza el método .lower() en caso que el usuario digite en mayúsculas, luego se llama a la función de la elección aleatoria de la palabra definida en el paso anterior.
+   - Segundo, se inicializa un bucle while con b en 1 que hará que el proceso que definiremos a continuación se defina hasta cierto punto o mejor dicho, hasta cierta condición específica.
+   - Tercero, dentro del bucle realizar tres condicionales para cada nivel de dificultad, para el fácil establecerse si la longitud de la palabra es menor o igual a 5, para el  normal si es mayor a 5 y menor o igual a 7 y por último difícil si la longitud de la palabra es menor a 7 letras.
    Finalmente cuando queda asignada la palabra escogida a un nivel de dificultad se retorna la función y se finaliza el bucle while.
    
    ```sh
@@ -95,7 +95,7 @@ de la siguiente manera:
                 palabra = Palabra(diccionario)
    ```
    
-8. 
+6. Con esta función es válido decir que se inicia como tal el juego, se llama la función definida en el paso anterior con la dificultad, y se multiplican las líneas('_') por el largo de la palabra.
    
    ```sh
    def encontrarPalabra(diccionario:dict):
@@ -103,8 +103,20 @@ de la siguiente manera:
     tablero = ['_']*len(palabra)
     return tablero, palabra,[]
    ```
+   A continuación un ejemplo de como funciona la anterior función:
+   ```sh
+   import random
+   listaPalabras = ["Perro", "Real Madrid", "Bogotá", "Queen", "Silla", "Rey León", "Argentina", "Ciclismo", "explorar", "Python"]
+   palabra = random.choice(listaPalabras).lower()
+   lineas = ['_'] * len(palabra)
+   print(palabra)
+   print(lineas)
+   ```
+
+   ![image](https://github.com/Artuu1999/Proyecto-Final/assets/124615034/2380338b-271c-4b2e-9264-5596ffb6e1b3)
+
    
-9. ss
+7. Se asigna a escenario una parte del dibujo del ahorcado con unos números en donde va la figura, que eventualmente serán remplazados por símbolos (aquellos que aparecen en la parte inferior del pseudocódigo)a medida que el usuario se vaya equivocando en el ingreso de las letras. Los números también indican el orden en el cual serán reemplazados.
    
    ```sh
    escenario = \
@@ -125,7 +137,7 @@ de la siguiente manera:
     simbolos = '--|-||/\/\)'
    ```
    
-10. 
+8. Ahora bien al ya tener el escenario se inicia a trabajar en base a el y en los cambios que tendrá a lo largo de la experiencia del jugado, definiendo la variables escena, luego se aplicara un ciclo for para iterar sobre cada símbolo verificando letra por letra si hay error y si hay se remplanza mediante el método .replace la escena por el símbolo.
    
    ```sh
    def escenarios(errores:int):
@@ -135,9 +147,12 @@ de la siguiente manera:
       escena = escena.replace(str(i), simbolo)
       print(escena)
    ```
-
-11. 
    
+9. Usar como argumentos los retornos de las funciones definidas anteriormente como el tablero, en el que se imprime la cantidad de líneas que tiene la palabras al azar y como letras erroneas.
+    - Ciclo for para cada línea del tablero, es decir iterar sobre cada espacio, imprimiendo en cada iteración el elemento i y usando end=' 'para evitar un salto de línea,
+    - Luego de imprimir los elementos del table se imprime (), un espacio que separa visualmente el tablero del resto de elementos.
+    - Se verifica si letrasErrorenas contiene elementos para imprimir comoo su nombre lo indica las letras que el usuario ingresa pero que no pertenecen a la palabra en cuestión.
+
    ```sh
    def tableros(tablero, letrasErroneas):
     for i in tablero:
@@ -147,12 +162,12 @@ de la siguiente manera:
     if len(letrasErroneas) > 0:
         print('letras erroneas', *letrasErroneas)
         print()
-   ```
+   ````
    
-11. 
-   
-   ```sh
-   def letras(letrasErroneas):
+10. Se tendrán en cuenta las particularidades a la hora del ingreso de las letras del alfabeto por parte del usuario, es decir si por ejemplo el jugador ingresa en vez de una letra un número u otro dígito no albafético.
+    Para ello se realizó un bucle para que se repita hasta que las condiciones que están en el se cumplan, se define la varible letra con el ingreso del usuario y que convierte a minúscula mediante el ya repetido método .lower(). Luego se realiza una serie de condicionales imprimiendo su respectivo mensaje en caso de: ingresar una letra ya ingresada, introducir más de una sola letra o ingresar una variable no alfabética. Retornando la variable letra al final de la función
+    ```sh
+    def letras(letrasErroneas):
     while True:
         letra = input("Ingrese una letra: ").lower()
         if letra in letrasErroneas:
@@ -163,10 +178,11 @@ de la siguiente manera:
             print("Debe ingresar una letra")
         else:
             return letra
-   ```
+      ````
+
+11. En esta función se utilizarán como argumentos letra,palabra,tablero y letrasErroneas, realizando un condicional para verificar si la letra ingresada se encuentra dentro de la palabra escogida por el programa, si es así se imprime la frase "muy bien",luego se llamaa la funcion actualizarTablero, la cual se definira posteriormente, la negación del condicional determina cuando el jugador comete un error, luego se agrega con el método append la letra incorrecta a una lista de letras incorrectas
    
-11. 
-```sh
+   ```sh
    def verificarLetra(letra,palabra,tablero,letrasErroneas:list):
     if letra in palabra:
         print("muy bien")
@@ -174,9 +190,9 @@ de la siguiente manera:
     else:
         print("¡Lo mataste!, sigue intentando :(")
         letrasErroneas.append(letra)
-```
+   ````
    
-12. 
+12. Se reciben los parámetros de la letra adivinada, la palabra que se está adivinando y el tablero, mediante un ciclo for y el método enumerate(), se itera sobre cada letra y se obtienen los índices, si la letra ingresada coincide con la letra de la palabra se actualiza el tablero en la posición de la letra adivinada asignando al tablero la letra.
    
    ```sh
    def actualizarTablero(letra, palabra, tablero):
@@ -185,14 +201,14 @@ de la siguiente manera:
             tablero[indice] = letra
    ````
    
-13. 
+13. La siguiente función retorna un dato de carácter booleano, es decir falso o verdadero, con respecto a que si todas las letras en el tablero han sido advinadas o no.
    
    ```sh
    def comrpoPalabra(tablero):
     return '_' not in tablero
-   ```
+   ````
    
-14. 
+14.
    
    ```sh
    def jugar(diccionario):
@@ -205,9 +221,9 @@ de la siguiente manera:
         if comrpoPalabra(tablero):
             print("Lo has logrado")
             break
-   ```
+   ````
    
-15. 
+15.
    
    ```sh
    def jugarOtraVez():
@@ -221,28 +237,21 @@ de la siguiente manera:
         jugarOtraVez()
    ````
    
-16. 
+16.
    
    ```sh
    def despedida():
     print("¡Gracias por jugar, somos Team comillas!")
    ````
    
-17. 
+17.
    
    ```sh
-   if __name__ == "__main__":
-   bienvenida()
-    while True:
-        jugar(diccionario)
-        a = jugarOtraVez()
-        if a == "sí":
-            continue
-        else:
-            break
-    despedida()
-   ```
-
+   def bienvenida():
+    print("Bienvenid@ a nuestro ahorcado")
+    print("somos Arturo Moreno y Juan Morales de Team comillas")
+   ````
+## Lógica de como funciona el juego
 ```mermaid
 flowchart TD
     A(Inicio)-->B[Bienvenido a este ahorcado]
